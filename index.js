@@ -144,23 +144,40 @@
 // }
 
 // console.log(studentiMedia(studenti))
+// const root = document.getElementById('root')
 
-const fetchData = async() => {
-    const useresResponse = await fetch('https://jsonplaceholder.typicode.com/users') 
-    const postsResponse = await fetch('https://jsonplaceholder.typicode.com/posts')
+// const fetchData = async() => {
+//     const useresResponse = await fetch('https://jsonplaceholder.typicode.com/users') 
+//     const postsResponse = await fetch('https://jsonplaceholder.typicode.com/posts')
 
-    const users = await useresResponse.json()
-    const posts = await postsResponse.json()
+//     const users = await useresResponse.json()
+//     const posts = await postsResponse.json()
 
-    return {users, posts}
-}
+//     return {users, posts}
+// }
 
-const renderPage = async() => {
-    const {users, posts} = await fetchData()
+// const renderPage = async() => {
+//     const {users, posts} = await fetchData()
 
-    console.log(users)
-    console.log(posts)
-}
+//     users.forEach((user) => {
+//         const listItem = document.createElement('div')
+//         const userName = document.createElement('p')
+//         userName.innerText = user.name
+
+//         listItem.appendChild(userName)
+
+//         posts.filter((post) => post.userId === user.id).forEach((post, idx) => {
+//             const postTitle = document.createElement('p')
+//             postTitle.innerText = `${idx + 1} ${post.title}`
+//             listItem.appendChild(postTitle)
+//         })
+
+//         root.appendChild(listItem)
+//     })
+
+//     console.log(users)
+//     console.log(posts)
+// }
 
 
 // De aratat pe pagina utilizatorii si titlu postarilor legate de ei
@@ -187,4 +204,3 @@ const renderPage = async() => {
 // *sunt aut facere repellat provident occaecati excepturi optio reprehenderit
 // *sunt aut facere repellat provident occaecati excepturi optio reprehenderit
 // *sunt aut facere repellat provident occaecati excepturi optio reprehenderit
-
